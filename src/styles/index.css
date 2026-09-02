@@ -1,0 +1,7 @@
+/* ==========================================================================
+   AMF FIRMA LEGAL - MAIN ENTRY STYLE SHEET
+   Imports the global design system & variables.
+   Component & Page styles are modularized in their respective directories.
+   ========================================================================== */
+
+@import './global.css';

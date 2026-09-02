@@ -1,0 +1,127 @@
+/* ==========================================================================
+   INTERACTIVE CAROUSEL & HERO STYLES
+   ========================================================================== */
+
+/* Hero Section Wrapper */
+.hero-wrapper {
+  background: linear-gradient(135deg, #350108 0%, #1E0004 100%);
+  color: var(--color-paper);
+  position: relative;
+  overflow: hidden;
+  padding-top: 4.5rem;
+  padding-bottom: 4rem;
+}
+
+.hero-wrapper::before {
+  content: '';
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(169, 134, 62, 0.15) 0%, rgba(53, 1, 8, 0) 70%);
+  pointer-events: none;
+}
+
+/* Interactive Carousel Container */
+.carousel-section {
+  margin-top: 2.5rem;
+}
+
+.carousel-card {
+  background: rgba(253, 249, 242, 0.07);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--color-border-gold);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  position: relative;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.35);
+}
+
+.carousel-card.card-accent-gold {
+  border-left: 5px solid var(--color-gold);
+}
+
+.carousel-card.card-accent-wine {
+  border-left: 5px solid #A9863E;
+}
+
+/* Carousel Control Bar */
+.carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+  padding: 0 0.5rem;
+}
+
+.carousel-dots {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.carousel-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: var(--radius-full);
+  background-color: rgba(253, 249, 242, 0.3);
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.carousel-dot.active {
+  width: 32px;
+  background-color: var(--color-gold);
+}
+
+.carousel-btn-icon {
+  background: rgba(253, 249, 242, 0.12);
+  border: 1px solid rgba(253, 249, 242, 0.2);
+  color: var(--color-paper);
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.carousel-btn-icon:hover {
+  background-color: var(--color-gold);
+  color: var(--color-wine);
+  border-color: var(--color-gold);
+}
+
+.pause-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.8rem;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(253, 249, 242, 0.2);
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  color: var(--color-text-on-dark-muted);
+  cursor: pointer;
+}
+
+.pause-pill:hover {
+  border-color: var(--color-gold);
+  color: var(--color-paper);
+}
+
+@media (max-width: 768px) {
+  .hero-wrapper {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .carousel-card {
+    padding: 1.8rem 1.2rem;
+  }
+}
