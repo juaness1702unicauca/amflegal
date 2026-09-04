@@ -1,7 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { ShieldCheck, Scale, Award, MessageSquare, X, ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
 import { whatsappLink, WA_MESSAGES } from '../config/siteConfig';
+import { SEOHead } from '../components/SEOHead';
 import './Equipo.css';
+
+const estebanPhoto = '/assets/Equipo fotos/Esteban Avila.png';
+const jorgePhoto   = '/assets/Equipo fotos/Jorge Florez.png';
+const juanPhoto    = '/assets/Equipo fotos/Juan Gregorio.png';
+const stevenPhoto  = '/assets/Equipo fotos/Steven Alegrias.png';
+const martinezPhoto = '/assets/Equipo fotos/Martinez.png';
 
 export const Equipo = () => {
   const [selectedMemberIndex, setSelectedMemberIndex] = useState(null);
@@ -12,7 +19,7 @@ export const Equipo = () => {
       role: 'Socio Fundador – AMF Firma Legal',
       subtitle: 'Especialista en Derecho Procesal Penal (U. Externado)',
       bio: 'Abogado, especialista en Derecho Procesal Penal de la Universidad Externado de Colombia, con amplia experiencia en litigio estratégico y defensa técnica en escenarios judiciales y administrativos.',
-      photo: '/assets/Equipo fotos/Esteban Avila.png',
+      photo: estebanPhoto,
       badge: 'Socio Fundador'
     },
     {
@@ -20,8 +27,8 @@ export const Equipo = () => {
       role: 'Socio Fundador – AMF Firma Legal',
       subtitle: 'Abogado Penalista | Esp. y Maestrando en Derecho Penal',
       bio: 'Abogado con sólida formación académica y experiencia práctica en Derecho Penal. Fue funcionario judicial de la Rama Judicial, desempeñándose en Juzgados Penales Municipales con Funciones de Control de Garantías y Juzgados Penales del Circuito con Funciones de Conocimiento en Santiago de Cali.',
-      photo: '/assets/Equipo fotos/Jorge Florez.png',
-      objectPosition: 'center bottom',
+      photo: jorgePhoto,
+      objectPosition: 'center 45%',
       badge: 'Socio Fundador'
     },
     {
@@ -29,7 +36,7 @@ export const Equipo = () => {
       role: 'Contador Público y Abogado',
       subtitle: 'Esp. en Finanzas y D. Procesal Penal | Maestrante en D. de Familia',
       bio: 'Contador Público y Abogado con amplia experiencia en asesoría jurídica, contable y financiera, integrando el análisis legal con la precisión técnica de la contabilidad, la auditoría y la gestión organizacional.',
-      photo: '/assets/Equipo fotos/Juan Gregorio.png',
+      photo: juanPhoto,
       badge: 'Finanzas & Derecho'
     },
     {
@@ -37,7 +44,7 @@ export const Equipo = () => {
       role: 'Abogado Especialista',
       subtitle: 'Derecho Administrativo y Derecho Legislativo (U. del Cauca)',
       bio: 'Abogado de la Universidad del Cauca, con enfoque en derecho administrativo y derecho legislativo. Cuenta con experiencia como auxiliar jurídico en oficinas jurídicas y entidades públicas, así como en el asesoramiento jurídico en el Congreso de la República.',
-      photo: '/assets/Equipo fotos/Steven Alegrias.png',
+      photo: stevenPhoto,
       badge: 'Administrativo'
     },
     {
@@ -45,7 +52,7 @@ export const Equipo = () => {
       role: 'Abogado Especialista',
       subtitle: 'Derecho Administrativo y Derecho Legislativo (U. del Cauca)',
       bio: 'Abogado de la Universidad del Cauca, con enfoque en derecho administrativo y derecho legislativo. Cuenta con experiencia como auxiliar jurídico en oficinas jurídicas y entidades públicas, así como en el asesoramiento jurídico en el Congreso de la República.',
-      photo: '/assets/Equipo fotos/Martinez.png',
+      photo: martinezPhoto,
       badge: 'Administrativo'
     }
   ];
@@ -72,12 +79,10 @@ export const Equipo = () => {
 
   return (
     <main>
+      <SEOHead pageKey="equipo" />
       {/* Header Equipo */}
       <section className="section" style={{ backgroundColor: 'var(--color-cream)', paddingTop: '2.5rem', paddingBottom: '3.5rem' }}>
         <div className="container text-center" style={{ maxWidth: '850px', margin: '0 auto' }}>
-          <span className="badge badge-gold" style={{ marginBottom: '1rem' }}>
-            <Award size={14} /> EXCELENCIA JURÍDICA E INTEGRIDAD
-          </span>
           <h1 className="text-serif" style={{ fontSize: 'clamp(2.2rem, 4.5vw, 3.4rem)', color: 'var(--color-wine)', marginBottom: '1rem' }}>
             Equipo Profesional AMF Firma Legal
           </h1>
@@ -104,7 +109,8 @@ export const Equipo = () => {
                 <div className="team-photo-summary-wrapper">
                   <img
                     src={member.photo}
-                    alt={member.name}
+                    alt={`${member.name} - ${member.role} | AMF Firma Legal`}
+                    loading="lazy"
                     className="team-photo-summary"
                     style={{ objectPosition: member.objectPosition || 'top center', ...(member.imgStyle || {}) }}
                     onError={(e) => {
@@ -150,9 +156,36 @@ export const Equipo = () => {
         </div>
       </section>
 
-      {/* VISTA AMPLIADA / MODAL CON NAVEGACIÓN ENTRE MIEMBROS */}
+      {/* VISTA AMPLIADA / MODAL CON NAVEGACIÓN PROMINENTE ENTRE MIEMBROS */}
       {selectedMemberIndex !== null && activeMember && (
         <div className="team-modal-overlay" onClick={() => setSelectedMemberIndex(null)}>
+          
+          {/* Flecha Flotante Izquierda (Anterior) */}
+          <button
+            className="modal-side-nav-btn modal-side-nav-prev"
+            onClick={(e) => {
+              e.stopPropagation();
+              setSelectedMemberIndex(selectedMemberIndex > 0 ? selectedMemberIndex - 1 : teamMembers.length - 1);
+            }}
+            title="Perfil Anterior (Flecha Izquierda)"
+            aria-label="Perfil Anterior"
+          >
+            <ChevronLeft size={28} />
+          </button>
+
+          {/* Flecha Flotante Derecha (Siguiente) */}
+          <button
+            className="modal-side-nav-btn modal-side-nav-next"
+            onClick={(e) => {
+              e.stopPropagation();
+              setSelectedMemberIndex(selectedMemberIndex < teamMembers.length - 1 ? selectedMemberIndex + 1 : 0);
+            }}
+            title="Perfil Siguiente (Flecha Derecha)"
+            aria-label="Perfil Siguiente"
+          >
+            <ChevronRight size={28} />
+          </button>
+
           <div className="team-modal-card" onClick={(e) => e.stopPropagation()}>
 
             {/* Botón de cierre */}
@@ -165,12 +198,14 @@ export const Equipo = () => {
               <X size={22} />
             </button>
 
+
+
             {/* Cabecera Modal */}
             <div className="team-modal-header">
               <div className="team-modal-photo-wrapper">
                 <img
                   src={activeMember.photo}
-                  alt={activeMember.name}
+                  alt={`${activeMember.name} - ${activeMember.role} | AMF Firma Legal`}
                   className="team-modal-photo"
                   style={{ objectPosition: activeMember.objectPosition || 'top center', ...(activeMember.imgStyle || {}) }}
                 />
@@ -220,29 +255,6 @@ export const Equipo = () => {
               >
                 <MessageSquare size={16} />
                 <span>Agendar Consulta</span>
-              </button>
-            </div>
-
-            {/* Barra de Navegación entre miembros en el Modal */}
-            <div className="team-modal-nav-bar">
-              <button
-                className="nav-member-btn"
-                onClick={() => setSelectedMemberIndex(selectedMemberIndex > 0 ? selectedMemberIndex - 1 : teamMembers.length - 1)}
-              >
-                <ChevronLeft size={18} />
-                <span>Anterior: {teamMembers[selectedMemberIndex > 0 ? selectedMemberIndex - 1 : teamMembers.length - 1].name.split(' ')[0]}</span>
-              </button>
-
-              <span style={{ fontSize: '0.85rem', color: 'var(--color-text-muted)', fontWeight: 600 }}>
-                {selectedMemberIndex + 1} de {teamMembers.length}
-              </span>
-
-              <button
-                className="nav-member-btn"
-                onClick={() => setSelectedMemberIndex(selectedMemberIndex < teamMembers.length - 1 ? selectedMemberIndex + 1 : 0)}
-              >
-                <span>Siguiente: {teamMembers[selectedMemberIndex < teamMembers.length - 1 ? selectedMemberIndex + 1 : 0].name.split(' ')[0]}</span>
-                <ChevronRight size={18} />
               </button>
             </div>
 

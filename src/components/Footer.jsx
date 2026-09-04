@@ -4,18 +4,21 @@ import { MessageSquare, MapPin, ShieldCheck, Scale, Phone, ArrowUpRight } from '
 import { whatsappLink, WA_MESSAGES } from '../config/siteConfig';
 import './Footer.css';
 
+const logoCrema = '/assets/logos/Sin Fondo/AMF FIRMA LEGAL CREMA .png';
+
 export const Footer = () => {
   return (
     <footer style={{ backgroundColor: 'var(--color-wine)', color: 'var(--color-paper)', paddingTop: '4rem', paddingBottom: '2.5rem', borderTop: '2px solid var(--color-gold)' }}>
       <div className="container">
-        
+
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '3rem', marginBottom: '3.5rem' }}>
-          
+
           {/* Column 1: Brand & Tagline */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.2rem' }}>
-            <img 
-              src="/assets/logos/Sin Fondo/AMF FIRMA LEGAL CREMA .png" 
-              alt="AMF Firma Legal"
+            <img
+              src={logoCrema}
+              alt="AMF Firma Legal - Abogados en Colombia"
+              loading="lazy"
               style={{ height: '52px', width: 'auto', objectFit: 'contain', alignSelf: 'flex-start' }}
               onError={(e) => {
                 e.target.style.display = 'none';
@@ -59,6 +62,11 @@ export const Footer = () => {
                   Otras Áreas Jurídicas
                 </Link>
               </li>
+              <li>
+                <Link to="/clientes" style={{ color: 'var(--color-text-on-dark-muted)', transition: 'color 0.2s' }} onMouseEnter={(e) => e.target.style.color = '#FFF'}>
+                  Clientes Corporativos
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -70,9 +78,9 @@ export const Footer = () => {
             <p style={{ color: 'var(--color-text-on-dark-muted)', fontSize: '0.9rem', marginBottom: '1rem', lineHeight: '1.5' }}>
               Atención presencial siempre mediante <strong>agendamiento previo</strong> en nuestras sedes de Bogotá, Cali, Piendamó y Medellín.
             </p>
-            <Link 
-              to="/ubicaciones" 
-              className="btn btn-outline-light" 
+            <Link
+              to="/ubicaciones"
+              className="btn btn-outline-light"
               style={{ padding: '0.5rem 1rem', fontSize: '0.85rem', width: 'fit-content' }}
             >
               Ver Sedes y Agendamiento
@@ -88,7 +96,7 @@ export const Footer = () => {
             <p style={{ color: 'var(--color-text-on-dark-muted)', fontSize: '0.9rem', marginBottom: '1rem' }}>
               ¿Tienes una urgencia o quieres afiliarte hoy mismo?
             </p>
-            <a 
+            <a
               href={whatsappLink(undefined, WA_MESSAGES.DESDE_PENAL)}
               target="_blank"
               rel="noopener noreferrer"
@@ -103,13 +111,13 @@ export const Footer = () => {
         </div>
 
         {/* Legal Bottom Bar */}
-        <div 
-          style={{ 
-            borderTop: '1px solid rgba(253, 249, 242, 0.15)', 
-            paddingTop: '2rem', 
-            display: 'flex', 
-            flexWrap: 'wrap', 
-            alignItems: 'center', 
+        <div
+          style={{
+            borderTop: '1px solid rgba(253, 249, 242, 0.15)',
+            paddingTop: '2rem',
+            display: 'flex',
+            flexWrap: 'wrap',
+            alignItems: 'center',
             justifyContent: 'space-between',
             gap: '1rem',
             fontSize: '0.85rem',
@@ -122,7 +130,7 @@ export const Footer = () => {
           <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
             <span>* Las representaciones y servicios están sujetos a los términos de cada plan.</span>
             <Link to="/formulario" style={{ color: 'var(--color-gold)', textDecoration: 'underline' }}>
-              Términos & Condiciones
+              Tratamiento de Datos (Ley 1581)
             </Link>
           </div>
         </div>

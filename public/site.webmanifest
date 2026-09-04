@@ -1,0 +1,21 @@
+{
+  "name": "AMF Firma Legal",
+  "short_name": "AMF Legal",
+  "description": "Protección jurídica permanente para Fuerza Pública y defensa penal estratégica 24/7 en Colombia.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FDF9F2",
+  "theme_color": "#350108",
+  "icons": [
+    {
+      "src": "/assets/logos/Sin%20Fondo/AMF%20CREMA.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/logos/Sin%20Fondo/AMF%20CREMA.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

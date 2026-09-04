@@ -1,5 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import './DerechoPenal.css';
+import { SEOHead } from '../components/SEOHead';
 import {
   Scale,
   MessageSquare,
@@ -13,24 +15,23 @@ export const DerechoPenal = () => {
 
   return (
     <main>
-      {/* SECCIÓN UNIFICADA: ENCABEZADO Y SITIACIONES DE ORIENTACIÓN PENAL */}
-      <section className="section" style={{ backgroundColor: 'var(--color-cream)', paddingTop: '2.2rem', paddingBottom: '4rem' }}>
+      <SEOHead pageKey="derechoPenal" />
+      {/* SECCIÓN ENCABEZADO ESTÁNDAR */}
+      <section className="section" style={{ backgroundColor: 'var(--color-cream)', paddingTop: '2.2rem', paddingBottom: '3rem' }}>
+        <div className="container text-center" style={{ maxWidth: '800px', margin: '0 auto' }}>
+          <h1 className="text-serif" style={{ fontSize: 'clamp(2.2rem, 4.5vw, 3.2rem)', color: 'var(--color-wine)', marginBottom: '1rem' }}>
+            Defensa Penal Estratégica & Asistencia 24/7
+          </h1>
+
+          <p style={{ fontSize: '1.15rem', color: 'var(--color-text-muted)', lineHeight: '1.65' }}>
+            No te preguntamos qué código de delito es. Primero dinos qué situación estás enfrentando hoy para dar el primer paso con la estrategia adecuada:
+          </p>
+        </div>
+      </section>
+
+      {/* SECCIÓN SITUACIONES PENALES */}
+      <section className="section" style={{ backgroundColor: 'var(--color-paper)' }}>
         <div className="container">
-
-          {/* Encabezado Principal Unificado */}
-          <div style={{ textAlign: 'center', maxWidth: '850px', margin: '0 auto 3rem auto' }}>
-            <span className="badge badge-gold" style={{ marginBottom: '1.2rem' }}>
-              <Scale size={14} /> DEFENSE PENAL ESTRATÉGICA 24/7 EN COLOMBIA
-            </span>
-
-            <h1 className="text-serif" style={{ fontSize: 'clamp(2.2rem, 4.5vw, 3.2rem)', color: 'var(--color-wine)', marginBottom: '1rem', lineHeight: '1.2' }}>
-              Defensa Penal Estratégica & Asistencia 24/7
-            </h1>
-            <p style={{ fontSize: '1.15rem', color: 'var(--color-text-muted)', lineHeight: '1.6' }}>
-              No te preguntamos qué código de delito es. Primero dinos qué situación estás enfrentando hoy para dar el primer paso con la estrategia adecuada:
-            </p>
-          </div>
-
           {/* Grilla de 6 Situaciones Penales */}
           <div className="grid-3">
             {[
@@ -100,7 +101,6 @@ export const DerechoPenal = () => {
       <section className="section" style={{ backgroundColor: 'var(--color-paper)' }}>
         <div className="container">
           <div style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto 3.5rem auto' }}>
-            <span className="badge badge-gold" style={{ marginBottom: '1rem' }}>Áreas de Alta Complejidad</span>
             <h2 className="text-serif" style={{ fontSize: 'clamp(2rem, 4vw, 2.8rem)', color: 'var(--color-wine)' }}>
               Casos que exigen una defensa especialmente estratégica
             </h2>
@@ -181,7 +181,6 @@ export const DerechoPenal = () => {
       <section className="section" style={{ backgroundColor: 'var(--color-cream)' }}>
         <div className="container">
           <div style={{ textAlign: 'center', maxWidth: '750px', margin: '0 auto 3.5rem auto' }}>
-            <span className="badge badge-gold" style={{ marginBottom: '1rem' }}>Compromiso Profesional</span>
             <h2 className="text-serif" style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', color: 'var(--color-wine)', marginBottom: '1rem' }}>
               Estrategia. Orden. Defensa.
             </h2>
@@ -218,7 +217,6 @@ export const DerechoPenal = () => {
       {/* SECCIÓN 4: ECONOMÍA EN DERECHO PENAL */}
       <section className="section section-cream">
         <div className="container container-narrow text-center">
-          <span className="badge badge-wine" style={{ marginBottom: '1rem' }}>Facilidades de Pago</span>
           <h2 className="text-serif" style={{ fontSize: 'clamp(2rem, 4vw, 2.8rem)', color: 'var(--color-wine)', marginBottom: '1rem' }}>
             Necesitas defensa. El pago también necesita una solución.
           </h2>

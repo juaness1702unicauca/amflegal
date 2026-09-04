@@ -11,7 +11,7 @@
   --color-gold: #A9863E;
   --color-gold-hover: #8C6D2D;
   --color-gold-light: rgba(169, 134, 62, 0.12);
-  --color-wine-light: rgba(53, 1, 8, 0.05);
+  --color-wine-light: rgba(53, 1, 8, 0.05c);
 
   --color-text-primary: #221A14;
   --color-text-muted: #594D43;
@@ -218,15 +218,18 @@ textarea {
 }
 
 .btn-secondary {
-  background-color: var(--color-cream);
-  color: var(--color-wine);
-  border: 1px solid rgba(53, 1, 8, 0.2);
+  background-color: #330108;
+  color: var(--color-paper);
+  border: 1px solid #330108;
+  box-shadow: var(--shadow-sm);
 }
 
 .btn-secondary:hover {
-  background-color: #EFE4D3;
-  border-color: var(--color-wine);
+  background-color: #50020d;
+  border-color: #50020d;
+  color: var(--color-paper);
   transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
 }
 
 .btn-outline-light {
@@ -319,6 +322,7 @@ textarea {
 
 /* Responsive base rules */
 @media (max-width: 992px) {
+
   .grid-3,
   .grid-4 {
     grid-template-columns: repeat(2, 1fr);

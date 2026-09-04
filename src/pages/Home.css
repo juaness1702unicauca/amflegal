@@ -1,0 +1,95 @@
+/* ==========================================================================
+   HOME PAGE STYLES
+   ========================================================================== */
+
+/* ── Hero Section ── */
+.hero-wrapper {
+  background-color: var(--color-wine);
+  background-image:
+    radial-gradient(ellipse at 20% 50%, rgba(169, 134, 62, 0.08) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 20%, rgba(169, 134, 62, 0.06) 0%, transparent 50%);
+}
+
+/* ── Services Grid Cards ── */
+.home-service-card {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #FFF;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+}
+
+.home-service-card:hover {
+  border-color: var(--color-gold);
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.home-service-card-link {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--color-gold);
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: gap var(--transition-fast);
+}
+
+.home-service-card:hover .home-service-card-link {
+  gap: 0.7rem;
+}
+
+/* ── CTA Cards (dark section) ── */
+.home-cta-card {
+  padding: 2.2rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid var(--color-border-gold);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45);
+  border-radius: var(--radius-lg);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.home-cta-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55);
+}
+
+.home-cta-card-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-gold);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ── Branches / Sedes bar ── */
+.home-sedes-bar {
+  margin-top: 3rem;
+  padding-top: 1.8rem;
+  border-top: 1px solid rgba(253, 249, 242, 0.15);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.home-sedes-location {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--color-gold);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .home-cta-card {
+    padding: 1.6rem;
+  }
+}

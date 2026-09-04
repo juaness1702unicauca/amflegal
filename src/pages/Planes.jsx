@@ -2,17 +2,16 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Check, ShieldCheck, MessageSquare, ArrowRight, Info, HelpCircle } from 'lucide-react';
 import { PAYMENT_LINKS, whatsappLink, WA_MESSAGES } from '../config/siteConfig';
+import { SEOHead } from '../components/SEOHead';
 import './Planes.css';
 
 export const Planes = () => {
   return (
     <main>
+      <SEOHead pageKey="planes" />
       {/* Header Planes */}
       <section className="section" style={{ backgroundColor: 'var(--color-cream)', paddingTop: '2.2rem', paddingBottom: '3rem' }}>
         <div className="container text-center" style={{ maxWidth: '800px', margin: '0 auto' }}>
-          <span className="badge badge-gold" style={{ marginBottom: '1.2rem' }}>
-            <ShieldCheck size={14} /> TARIFAS Y PLANES TRANSPARENTES
-          </span>
           <h1 className="text-serif" style={{ fontSize: 'clamp(2.2rem, 4.5vw, 3.2rem)', color: 'var(--color-wine)', marginBottom: '1rem' }}>
             Elige el nivel de protección que necesitas
           </h1>
@@ -62,7 +61,7 @@ export const Planes = () => {
                 href={PAYMENT_LINKS.escudo || whatsappLink(undefined, WA_MESSAGES.PLAN_ESCUDO)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-secondary"
+                className="btn btn-primary"
                 style={{ width: '100%' }}
               >
                 Activar Escudo
@@ -105,7 +104,7 @@ export const Planes = () => {
                 href={PAYMENT_LINKS.fortaleza || whatsappLink(undefined, WA_MESSAGES.PLAN_FORTALEZA)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-gold"
+                className="btn btn-primary"
                 style={{ width: '100%' }}
               >
                 Quiero Fortaleza

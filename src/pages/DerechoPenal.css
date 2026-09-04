@@ -1,0 +1,100 @@
+/* ==========================================================================
+   DERECHO PENAL PAGE STYLES
+   ========================================================================== */
+
+/* ── Hero header ── */
+.dp-hero {
+  background-color: var(--color-wine);
+  position: relative;
+  overflow: hidden;
+}
+
+.dp-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(ellipse at 75% 40%, rgba(169, 134, 62, 0.1) 0%, transparent 55%);
+  pointer-events: none;
+}
+
+/* ── Services grid ── */
+.dp-services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.8rem;
+}
+
+/* ── Service card ── */
+.dp-service-card {
+  background-color: #FFFFFF;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  padding: 2rem 1.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal);
+}
+
+.dp-service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-gold);
+}
+
+/* ── Emergency callout ── */
+.dp-emergency-callout {
+  background-color: var(--color-wine);
+  border: 2px solid var(--color-gold);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.dp-emergency-callout::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 50% 100%, rgba(169, 134, 62, 0.12) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+/* ── Process steps ── */
+.dp-steps-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.dp-step-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+}
+
+.dp-step-number {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--color-gold);
+  color: var(--color-paper);
+  font-weight: 700;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-family: var(--font-serif);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .dp-services-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -7,7 +7,7 @@
  * 3. PAYMENT_LINKS: URLs de la pasarela de pagos externa para cada uno de los 3 planes de Fuerza Pública.
  */
 
-export const WHATSAPP_NUMBER = "573000000000"; // PLACEHOLDER: Reemplazar con el número real de AMF
+export const WHATSAPP_NUMBER = "573155977466";
 
 export const WEB3FORMS_ACCESS_KEY = "YOUR_WEB3FORMS_ACCESS_KEY"; // PLACEHOLDER: Reemplazar con la Access Key de Web3Forms
 

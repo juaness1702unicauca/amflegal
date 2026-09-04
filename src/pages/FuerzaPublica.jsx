@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import './FuerzaPublica.css';
+import { SEOHead } from '../components/SEOHead';
 import {
   ShieldCheck,
   MessageSquare,
@@ -92,25 +94,23 @@ export const FuerzaPublica = () => {
 
   return (
     <main>
-      {/* SECCIÓN UNIFICADA: ENCABEZADO Y PLANES DE SUSCRIPCIÓN FUERZA PÚBLICA */}
-      <section className="section" style={{ backgroundColor: 'var(--color-cream)', paddingTop: '2.2rem', paddingBottom: '4rem' }}>
+      <SEOHead pageKey="fuerzaPublica" />
+      {/* SECCIÓN ENCABEZADO ESTÁNDAR */}
+      <section className="section" style={{ backgroundColor: 'var(--color-cream)', paddingTop: '2.2rem', paddingBottom: '3rem' }}>
+        <div className="container text-center" style={{ maxWidth: '800px', margin: '0 auto' }}>
+          <h1 className="text-serif" style={{ fontSize: 'clamp(2.2rem, 4.5vw, 3.2rem)', color: 'var(--color-wine)', marginBottom: '1rem' }}>
+            Suscripción Jurídica para Fuerza Pública
+          </h1>
+
+          <p style={{ fontSize: '1.15rem', color: 'var(--color-text-muted)', lineHeight: '1.65' }}>
+            Protección legal permanente para Policía Nacional, Ejército, Armada y Fuerza Aeroespacial con consultas ilimitadas y respaldo familiar.
+          </p>
+        </div>
+      </section>
+
+      {/* SECCIÓN PLANES DE SUSCRIPCIÓN */}
+      <section className="section" style={{ backgroundColor: 'var(--color-paper)' }}>
         <div className="container">
-
-          {/* Encabezado Principal Unificado */}
-          <div style={{ textAlign: 'center', maxWidth: '850px', margin: '0 auto 3rem auto' }}>
-            <span className="badge badge-gold" style={{ marginBottom: '1.2rem' }}>
-              <ShieldCheck size={14} /> EXCLUSIVO PARA FUERZA PÚBLICA EN COLOMBIA
-            </span>
-
-            <h1 className="text-serif" style={{ fontSize: 'clamp(2.2rem, 4.5vw, 3.2rem)', color: 'var(--color-wine)', marginBottom: '1rem', lineHeight: '1.2' }}>
-              Suscripción Jurídica para Fuerza Pública
-            </h1>
-
-            <p style={{ fontSize: '1.1rem', color: 'var(--color-text-muted)', marginBottom: '0.8rem', lineHeight: '1.6' }}>
-              Protección legal permanente para Policía Nacional, Ejército, Armada y Fuerza Aeroespacial con consultas ilimitadas y respaldo familiar.
-            </p>
-          </div>
-
           {/* Grilla de 3 Planes de Suscripción */}
           <div className="grid-3" style={{ alignItems: 'stretch' }}>
 
@@ -165,7 +165,7 @@ export const FuerzaPublica = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={(e) => e.stopPropagation()}
-                  className="btn btn-gold"
+                  className="btn btn-primary"
                   style={{ width: '100%', fontSize: '0.9rem' }}
                 >
                   Activar Escudo
@@ -225,7 +225,7 @@ export const FuerzaPublica = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={(e) => e.stopPropagation()}
-                  className="btn btn-gold"
+                  className="btn btn-primary"
                   style={{ width: '100%', fontSize: '0.9rem' }}
                 >
                   Quiero Fortaleza
@@ -301,7 +301,6 @@ export const FuerzaPublica = () => {
       <section className="section" style={{ backgroundColor: 'var(--color-paper)' }}>
         <div className="container">
           <div style={{ textAlign: 'center', maxWidth: '750px', margin: '0 auto 3.5rem auto' }}>
-            <span className="badge badge-wine" style={{ marginBottom: '1rem' }}>Servicios Incluidos</span>
             <h2 className="text-serif" style={{ fontSize: 'clamp(2rem, 4vw, 2.8rem)', color: 'var(--color-wine)' }}>
               Seis pilares de protección para tu carrera y tu hogar
             </h2>

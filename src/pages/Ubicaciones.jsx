@@ -1,13 +1,15 @@
 import React from 'react';
 import { MapPin, MessageSquare, Clock, ShieldCheck, ArrowRight, Phone } from 'lucide-react';
 import { whatsappLink, WA_MESSAGES } from '../config/siteConfig';
+import { SEOHead } from '../components/SEOHead';
+import './Ubicaciones.css';
 
 export const Ubicaciones = () => {
   return (
     <main>
+      <SEOHead pageKey="ubicaciones" />
       <section className="section" style={{ backgroundColor: 'var(--color-cream)', paddingTop: '2.2rem', paddingBottom: '3rem' }}>
         <div className="container text-center" style={{ maxWidth: '800px', margin: '0 auto' }}>
-          <span className="badge badge-gold" style={{ marginBottom: '1.2rem' }}>Presencia & Agendamiento</span>
           <h1 className="text-serif" style={{ fontSize: 'clamp(2.2rem, 4.5vw, 3.2rem)', color: 'var(--color-wine)', marginBottom: '1rem' }}>
             Sedes & Atención en Colombia
           </h1>
@@ -102,7 +104,8 @@ export const Ubicaciones = () => {
               </div>
               <button 
                 onClick={() => window.open(whatsappLink(undefined, WA_MESSAGES.SEDE_MEDELLIN), '_blank')}
-                className="btn btn-gold"
+                className="btn btn-secondary"
+                style={{ width: '100%' }}
               >
                 Agendar Medellín
               </button>

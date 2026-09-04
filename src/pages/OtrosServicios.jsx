@@ -12,6 +12,8 @@ import {
   MessageSquare
 } from 'lucide-react';
 import { whatsappLink } from '../config/siteConfig';
+import { SEOHead } from '../components/SEOHead';
+import './OtrosServicios.css';
 
 export const OtrosServicios = () => {
   const navigate = useNavigate();
@@ -30,9 +32,9 @@ export const OtrosServicios = () => {
 
   return (
     <main>
+      <SEOHead pageKey="otrosServicios" />
       <section className="section" style={{ backgroundColor: 'var(--color-cream)', paddingTop: '2.2rem', paddingBottom: '3rem' }}>
         <div className="container text-center" style={{ maxWidth: '800px', margin: '0 auto' }}>
-          <span className="badge badge-gold" style={{ marginBottom: '1.2rem' }}>Capacidad Multidisciplinaria</span>
           <h1 className="text-serif" style={{ fontSize: 'clamp(2.2rem, 4.5vw, 3.2rem)', color: 'var(--color-wine)', marginBottom: '1rem' }}>
             Otras Áreas Jurídicas de AMF
           </h1>
