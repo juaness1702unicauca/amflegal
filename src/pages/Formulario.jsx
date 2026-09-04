@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { WEB3FORMS_ACCESS_KEY, whatsappLink } from '../config/siteConfig';
-import { Send, CheckCircle2, MessageSquare, ShieldCheck, Mail, Phone, MapPin, User, FileText, X, AlertCircle, BookOpen, Check } from 'lucide-react';
+import { Send, CheckCircle2, ShieldCheck, Mail, Phone, MapPin, User, FileText, X, AlertCircle, BookOpen, Check } from 'lucide-react';
 import { SEOHead } from '../components/SEOHead';
+import { WhatsAppIcon } from '../components/WhatsAppIcon';
 import './Formulario.css';
 
 export const Formulario = () => {
@@ -279,7 +280,7 @@ export const Formulario = () => {
                     className="btn btn-gold"
                     style={{ fontSize: '1rem', width: '100%', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem' }}
                   >
-                    <MessageSquare size={18} />
+                    <WhatsAppIcon size={18} />
                     <span>Abrir WhatsApp Ahora</span>
                   </button>
                 </div>
@@ -684,7 +685,7 @@ export const Formulario = () => {
                   }}
                   title={!formData.aceptaDatos ? 'Debes autorizar el tratamiento de datos para habilitar el envío' : ''}
                 >
-                  <MessageSquare size={20} />
+                  <WhatsAppIcon size={20} />
                   <span>
                     {formData.necesidad === 'Planes y Suscripción Fuerza Pública' ? 'Enviar Solicitud de Afiliación por WhatsApp' : 'Enviar Consulta por WhatsApp'}
                   </span>

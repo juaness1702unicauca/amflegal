@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { ShieldCheck, Scale, Award, MessageSquare, X, ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
-import { whatsappLink, WA_MESSAGES, getAssetUrl } from '../config/siteConfig';
+import { ShieldCheck, Scale, Award, X, ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
+import { whatsappLink, WA_MESSAGES } from '../config/siteConfig';
 import { SEOHead } from '../components/SEOHead';
+import { WhatsAppIcon } from '../components/WhatsAppIcon';
 import './Equipo.css';
 
-const estebanPhoto = getAssetUrl('assets/Equipo fotos/Esteban Avila.png');
-const jorgePhoto   = getAssetUrl('assets/Equipo fotos/Jorge Florez.png');
-const juanPhoto    = getAssetUrl('assets/Equipo fotos/Juan Gregorio.png');
-const stevenPhoto  = getAssetUrl('assets/Equipo fotos/Steven Alegrias.png');
-const martinezPhoto = getAssetUrl('assets/Equipo fotos/Martinez.png');
+const estebanPhoto = '/assets/Equipo fotos/Esteban Avila.png';
+const jorgePhoto   = '/assets/Equipo fotos/Jorge Florez.png';
+const juanPhoto    = '/assets/Equipo fotos/Juan Gregorio.png';
+const stevenPhoto  = '/assets/Equipo fotos/Steven Alegrias.png';
+const martinezPhoto = '/assets/Equipo fotos/Martinez.png';
 
 export const Equipo = () => {
   const [selectedMemberIndex, setSelectedMemberIndex] = useState(null);
@@ -148,7 +149,7 @@ export const Equipo = () => {
               className="btn btn-gold"
               style={{ fontSize: '1.05rem', padding: '1rem 2.2rem' }}
             >
-              <MessageSquare size={20} />
+              <WhatsAppIcon size={20} />
               <span>Contactar al Equipo Legal AMF</span>
             </button>
           </div>
@@ -253,7 +254,7 @@ export const Equipo = () => {
                 className="btn btn-gold"
                 style={{ padding: '0.6rem 1.2rem', fontSize: '0.88rem' }}
               >
-                <MessageSquare size={16} />
+                <WhatsAppIcon size={16} />
                 <span>Agendar Consulta</span>
               </button>
             </div>

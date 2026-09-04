@@ -2,9 +2,9 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './DerechoPenal.css';
 import { SEOHead } from '../components/SEOHead';
+import { WhatsAppIcon } from '../components/WhatsAppIcon';
 import {
   Scale,
-  MessageSquare,
   PhoneCall,
   ArrowRight
 } from 'lucide-react';
@@ -87,7 +87,7 @@ export const DerechoPenal = () => {
                   className="btn btn-secondary"
                   style={{ width: '100%', fontSize: '0.9rem' }}
                 >
-                  <MessageSquare size={16} />
+                  <WhatsAppIcon size={16} />
                   <span>{sit.cta}</span>
                 </button>
               </div>
@@ -228,7 +228,7 @@ export const DerechoPenal = () => {
             className="btn btn-gold"
             style={{ fontSize: '1.05rem', padding: '0.95rem 2rem' }}
           >
-            <MessageSquare size={18} />
+            <WhatsAppIcon size={18} />
             <span>Consultar Opciones de Pago</span>
           </button>
         </div>

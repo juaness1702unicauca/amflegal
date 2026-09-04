@@ -1,7 +1,8 @@
 import React from 'react';
-import { MapPin, MessageSquare, Clock, ShieldCheck, ArrowRight, Phone } from 'lucide-react';
+import { MapPin, Clock, ShieldCheck, ArrowRight, Phone } from 'lucide-react';
 import { whatsappLink, WA_MESSAGES } from '../config/siteConfig';
 import { SEOHead } from '../components/SEOHead';
+import { WhatsAppIcon } from '../components/WhatsAppIcon';
 import './Ubicaciones.css';
 
 export const Ubicaciones = () => {
@@ -40,9 +41,10 @@ export const Ubicaciones = () => {
               <button 
                 onClick={() => window.open(whatsappLink(undefined, WA_MESSAGES.SEDE_BOGOTA), '_blank')}
                 className="btn btn-secondary" 
-                style={{ width: '100%' }}
+                style={{ width: '100%', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '0.45rem' }}
               >
-                Agendar Bogotá
+                <WhatsAppIcon size={16} />
+                <span>Agendar Bogotá</span>
               </button>
             </div>
 
@@ -62,9 +64,10 @@ export const Ubicaciones = () => {
               <button 
                 onClick={() => window.open(whatsappLink(undefined, WA_MESSAGES.SEDE_CALI), '_blank')}
                 className="btn btn-secondary" 
-                style={{ width: '100%' }}
+                style={{ width: '100%', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '0.45rem' }}
               >
-                Agendar Cali
+                <WhatsAppIcon size={16} />
+                <span>Agendar Cali</span>
               </button>
             </div>
 
@@ -84,9 +87,10 @@ export const Ubicaciones = () => {
               <button 
                 onClick={() => window.open(whatsappLink(undefined, WA_MESSAGES.SEDE_PIENDAMO), '_blank')}
                 className="btn btn-secondary" 
-                style={{ width: '100%' }}
+                style={{ width: '100%', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '0.45rem' }}
               >
-                Agendar Piendamó
+                <WhatsAppIcon size={16} />
+                <span>Agendar Piendamó</span>
               </button>
             </div>
 
@@ -105,9 +109,10 @@ export const Ubicaciones = () => {
               <button 
                 onClick={() => window.open(whatsappLink(undefined, WA_MESSAGES.SEDE_MEDELLIN), '_blank')}
                 className="btn btn-secondary"
-                style={{ width: '100%' }}
+                style={{ width: '100%', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '0.45rem' }}
               >
-                Agendar Medellín
+                <WhatsAppIcon size={16} />
+                <span>Agendar Medellín</span>
               </button>
             </div>
 
@@ -123,8 +128,10 @@ export const Ubicaciones = () => {
               <button 
                 onClick={() => window.open(whatsappLink(undefined, WA_MESSAGES.ATENCION_VIRTUAL), '_blank')}
                 className="btn btn-primary"
+                style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '0.45rem' }}
               >
-                Atención Virtual Directa
+                <WhatsAppIcon size={16} />
+                <span>Atención Virtual Directa</span>
               </button>
             </div>
           </div>

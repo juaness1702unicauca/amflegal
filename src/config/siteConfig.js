@@ -30,15 +30,6 @@ export const whatsappLink = (number = WHATSAPP_NUMBER, message = "") => {
 };
 
 /**
- * Resuelve rutas de archivos estáticos respetando la base del entorno (GitHub Pages o dominio propio).
- */
-export const getAssetUrl = (path) => {
-  const cleanPath = path.startsWith('/') ? path.slice(1) : path;
-  const baseUrl = import.meta.env.BASE_URL || './';
-  return `${baseUrl}${cleanPath}`;
-};
-
-/**
  * Mensajes prellenados de WhatsApp unificados por contexto (Sección 18 del Brief)
  */
 export const WA_MESSAGES = {

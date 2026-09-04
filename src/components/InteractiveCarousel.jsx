@@ -9,7 +9,7 @@ import {
   Play,
   MessageSquare
 } from 'lucide-react';
-import { whatsappLink, WA_MESSAGES, getAssetUrl } from '../config/siteConfig';
+import { whatsappLink, WA_MESSAGES } from '../config/siteConfig';
 import './InteractiveCarousel.css';
 
 // Icono oficial de WhatsApp 🟢
@@ -96,7 +96,7 @@ export const InteractiveCarousel = () => {
   const slides = [
     {
       id: 'fuerza-publica',
-      bgImage: getAssetUrl('assets/BACKGROUNDS/FUERZAS ARMADAS.png'),
+      bgImage: '/assets/BACKGROUNDS/FUERZAS ARMADAS.png',
       badge: 'DEFENSA PARA FUERZAS ARMADAS Y POLICÍA',
       headline: 'Protección Jurídica para la Fuerza Pública',
       subheadline: 'Consultas ilimitadas, defensa técnica disciplinaria y cobertura legal permanente para ti y tu familia.',
@@ -110,7 +110,7 @@ export const InteractiveCarousel = () => {
     },
     {
       id: 'defensa-penal',
-      bgImage: getAssetUrl('assets/BACKGROUNDS/JUSTICIA PENAL ESTRATEGICA.png'),
+      bgImage: '/assets/BACKGROUNDS/JUSTICIA PENAL ESTRATEGICA.png',
       badge: 'RESPUESTA JURÍDICA INMEDIATA 24/7',
       headline: 'Defensa Penal Estratégica 24/7',
       subheadline: 'Representación experta las 24 horas ante capturas, investigaciones, citaciones de Fiscalía y audiencias.',

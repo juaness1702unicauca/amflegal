@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Check, ShieldCheck, MessageSquare, ArrowRight, Info, HelpCircle } from 'lucide-react';
+import { Check, ShieldCheck, ArrowRight, Info, HelpCircle } from 'lucide-react';
 import { PAYMENT_LINKS, whatsappLink, WA_MESSAGES } from '../config/siteConfig';
 import { SEOHead } from '../components/SEOHead';
+import { WhatsAppIcon } from '../components/WhatsAppIcon';
 import './Planes.css';
 
 export const Planes = () => {
@@ -182,7 +183,7 @@ export const Planes = () => {
             onClick={() => window.open(whatsappLink(undefined, WA_MESSAGES.DESDE_SUSCRIPCIONES), '_blank')}
             className="btn btn-gold"
           >
-            <MessageSquare size={18} />
+            <WhatsAppIcon size={18} />
             <span>Asesoría por WhatsApp</span>
           </button>
         </div>

@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './FuerzaPublica.css';
 import { SEOHead } from '../components/SEOHead';
+import { WhatsAppIcon } from '../components/WhatsAppIcon';
 import {
   ShieldCheck,
-  MessageSquare,
   Scale,
   HeartHandshake,
   ArrowRight,
@@ -321,7 +321,7 @@ export const FuerzaPublica = () => {
                 className="btn btn-secondary"
                 style={{ width: '100%', fontSize: '0.9rem' }}
               >
-                <MessageSquare size={16} />
+                <WhatsAppIcon size={16} />
                 <span>Preguntar a un Abogado</span>
               </button>
             </div>
@@ -375,7 +375,7 @@ export const FuerzaPublica = () => {
                 className="btn btn-secondary"
                 style={{ width: '100%', fontSize: '0.9rem' }}
               >
-                <MessageSquare size={16} />
+                <WhatsAppIcon size={16} />
                 <span>Consultar Amparo Familiar</span>
               </button>
             </div>
@@ -552,7 +552,7 @@ export const FuerzaPublica = () => {
             onClick={() => window.open(whatsappLink(undefined, WA_MESSAGES.DESDE_SUSCRIPCIONES), '_blank')}
             className="btn btn-gold"
           >
-            <MessageSquare size={18} />
+            <WhatsAppIcon size={18} />
             <span>Hablar con un Asesor AMF</span>
           </button>
         </div>

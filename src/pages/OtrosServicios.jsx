@@ -8,11 +8,11 @@ import {
   Briefcase, 
   Building, 
   HeartHandshake, 
-  ArrowRight,
-  MessageSquare
+  ArrowRight
 } from 'lucide-react';
 import { whatsappLink } from '../config/siteConfig';
 import { SEOHead } from '../components/SEOHead';
+import { WhatsAppIcon } from '../components/WhatsAppIcon';
 import './OtrosServicios.css';
 
 export const OtrosServicios = () => {
@@ -62,7 +62,7 @@ export const OtrosServicios = () => {
                   className="btn btn-secondary"
                   style={{ width: '100%', fontSize: '0.9rem' }}
                 >
-                  <MessageSquare size={16} />
+                  <WhatsAppIcon size={16} />
                   <span>Consultar esta área</span>
                 </button>
               </div>

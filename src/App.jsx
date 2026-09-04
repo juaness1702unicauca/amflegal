@@ -28,7 +28,7 @@ export function App() {
   return (
     <HelmetProvider>
       <LegalFirmSchema />
-      <BrowserRouter basename={import.meta.env.BASE_URL}>
+      <BrowserRouter>
         <ScrollToTop />
         <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', backgroundColor: 'var(--color-paper)' }}>
           <Navbar />

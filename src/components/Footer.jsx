@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { MessageSquare, MapPin, ShieldCheck, Scale, Phone, ArrowUpRight } from 'lucide-react';
-import { whatsappLink, WA_MESSAGES, getAssetUrl } from '../config/siteConfig';
+import { MapPin, ShieldCheck, Scale, Phone, ArrowUpRight } from 'lucide-react';
+import { whatsappLink, WA_MESSAGES } from '../config/siteConfig';
+import { WhatsAppIcon } from './WhatsAppIcon';
 import './Footer.css';
 
-const logoCrema = getAssetUrl('assets/logos/Sin Fondo/AMF FIRMA LEGAL CREMA .png');
+const logoCrema = '/assets/logos/Sin Fondo/AMF FIRMA LEGAL CREMA .png';
 
 export const Footer = () => {
   return (
@@ -103,7 +104,7 @@ export const Footer = () => {
               className="btn btn-gold"
               style={{ width: '100%', fontSize: '0.9rem' }}
             >
-              <MessageSquare size={16} />
+              <WhatsAppIcon size={16} />
               <span>WhatsApp 24/7</span>
             </a>
           </div>

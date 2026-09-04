@@ -19,7 +19,7 @@ import {
   Briefcase
 } from 'lucide-react';
 import { InteractiveCarousel } from '../components/InteractiveCarousel';
-import { whatsappLink, WA_MESSAGES, getAssetUrl } from '../config/siteConfig';
+import { whatsappLink, WA_MESSAGES } from '../config/siteConfig';
 
 const WhatsAppIcon = ({ size = 20, color = 'currentColor' }) => (
   <svg
@@ -256,7 +256,7 @@ export const Home = () => {
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'space-between',
-                backgroundImage: `linear-gradient(135deg, rgba(20, 1, 4, 0.88) 0%, rgba(53, 1, 8, 0.84) 50%, rgba(10, 0, 2, 0.94) 100%), url("${getAssetUrl('assets/BACKGROUNDS/FUERZAS ARMADAS.png')}")`,
+                backgroundImage: `linear-gradient(135deg, rgba(20, 1, 4, 0.88) 0%, rgba(53, 1, 8, 0.84) 50%, rgba(10, 0, 2, 0.94) 100%), url("/assets/BACKGROUNDS/FUERZAS ARMADAS.png")`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 border: '1px solid var(--color-border-gold)',
@@ -293,7 +293,7 @@ export const Home = () => {
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'space-between',
-                backgroundImage: `linear-gradient(135deg, rgba(29, 3, 4, 0.92) 0%, rgba(29, 3, 4, 0.88) 50%, rgba(15, 1, 2, 0.95) 100%), url("${getAssetUrl('assets/BACKGROUNDS/JUSTICIA PENAL ESTRATEGICA.png')}")`,
+                backgroundImage: `linear-gradient(135deg, rgba(29, 3, 4, 0.92) 0%, rgba(29, 3, 4, 0.88) 50%, rgba(15, 1, 2, 0.95) 100%), url("/assets/BACKGROUNDS/JUSTICIA PENAL ESTRATEGICA.png")`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 backgroundColor: '#1d0304',
