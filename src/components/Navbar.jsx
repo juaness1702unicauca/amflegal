@@ -27,7 +27,9 @@ export const Navbar = () => {
   const navigate = useNavigate();
 
   // Detectar si estamos en cualquier pestaña / subpágina interna diferente a Inicio
-  const isDarkNav = location.pathname !== '/';
+  const cleanPath = location.pathname.replace(/\/+$/, '') || '/';
+  const isHome = cleanPath === '/' || cleanPath === '/amflegal';
+  const isDarkNav = !isHome;
 
   useEffect(() => {
     const handleScroll = () => {
