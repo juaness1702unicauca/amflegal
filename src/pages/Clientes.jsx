@@ -1,14 +1,14 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Building2, ShieldCheck, ArrowRight, MessageSquare, CheckCircle2 } from 'lucide-react';
-import { whatsappLink, WA_MESSAGES } from '../config/siteConfig';
+import { whatsappLink, WA_MESSAGES, getAssetUrl } from '../config/siteConfig';
 import { SEOHead } from '../components/SEOHead';
 import './Clientes.css';
 
-const logoConvivalle = '/assets/logos/Logo Convivalle.avif';
-const logoEsmart     = '/assets/logos/ESMART.avif';
-const logoQualitas   = '/assets/logos/QUALITAS.avif';
-const logoDali       = '/assets/logos/DALI.avif';
+const logoConvivalle = getAssetUrl('assets/logos/Logo Convivalle.avif');
+const logoEsmart     = getAssetUrl('assets/logos/ESMART.avif');
+const logoQualitas   = getAssetUrl('assets/logos/QUALITAS.avif');
+const logoDali       = getAssetUrl('assets/logos/DALI.avif');
 
 export const Clientes = () => {
   const navigate = useNavigate();
