@@ -60,7 +60,7 @@ export const Equipo = () => {
       badge: 'Administrativo'
     },
     {
-      name: 'Martínez',
+      name: 'Juan Sebastián Martínez',
       role: 'Abogado Especialista',
       subtitle: 'Derecho Administrativo y Derecho Legislativo (U. del Cauca)',
       bio: 'Abogado de la Universidad del Cauca, con enfoque en derecho administrativo y derecho legislativo. Cuenta con experiencia como auxiliar jurídico en oficinas jurídicas y entidades públicas, así como en el asesoramiento jurídico en el Congreso de la República.',
@@ -102,7 +102,8 @@ export const Equipo = () => {
             { "@type": "ListItem", "position": 2, "item": { "@type": "Person", "name": "Jorge Ernesto Florez Martinez", "jobTitle": "Abogado Penalista Especialista en Derecho Penal", "worksFor": { "@type": "LegalService", "name": "AMF Firma Legal", "url": "https://amfjuridico.com" } } },
             { "@type": "ListItem", "position": 3, "item": { "@type": "Person", "name": "Juan Gregorio Minda Ceron", "jobTitle": "Contador Publico y Abogado Especialista en Finanzas y Derecho Procesal Penal", "worksFor": { "@type": "LegalService", "name": "AMF Firma Legal", "url": "https://amfjuridico.com" } } },
             { "@type": "ListItem", "position": 4, "item": { "@type": "Person", "name": "David Fernando Pechene Torres", "jobTitle": "Abogado Magister en Contratacion Estatal e Infraestructura Publica SECOP", "worksFor": { "@type": "LegalService", "name": "AMF Firma Legal", "url": "https://amfjuridico.com" } } },
-            { "@type": "ListItem", "position": 5, "item": { "@type": "Person", "name": "Steven Alegrias Bolanos", "jobTitle": "Abogado Especialista en Derecho Administrativo y Legislativo", "worksFor": { "@type": "LegalService", "name": "AMF Firma Legal", "url": "https://amfjuridico.com" } } }
+            { "@type": "ListItem", "position": 5, "item": { "@type": "Person", "name": "Steven Alegrias Bolanos", "jobTitle": "Abogado Especialista en Derecho Administrativo y Legislativo", "worksFor": { "@type": "LegalService", "name": "AMF Firma Legal", "url": "https://amfjuridico.com" } } },
+            { "@type": "ListItem", "position": 6, "item": { "@type": "Person", "name": "Juan Sebastian Martinez", "jobTitle": "Abogado Especialista en Derecho Administrativo y Legislativo", "worksFor": { "@type": "LegalService", "name": "AMF Firma Legal", "url": "https://amfjuridico.com" } } }
           ]
         })}</script>
       </Helmet>
