@@ -5,7 +5,7 @@
 
 export const SITE_DOMAIN = "https://amfjuridico.com";
 export const SITE_NAME = "AMF Firma Legal";
-export const DEFAULT_OG_IMAGE = `${SITE_DOMAIN}/assets/logos/Sin%20Fondo/AMF%20FIRMA%20LEGAL%20VINO%20TINTO.png`;
+export const DEFAULT_OG_IMAGE = `${SITE_DOMAIN}/og-image.jpg`;
 
 export const SEO_DATA = {
   home: {
@@ -52,8 +52,8 @@ export const SEO_DATA = {
   },
   equipo: {
     title: "Equipo Profesional & Litigantes | AMF Firma Legal",
-    description: "Abogados litigantes penalistas, administrativistas y contadores dedicados a la defensa técnica de tus derechos en Colombia.",
-    keywords: "equipo abogados amf, abogados penalistas colombia, firma legal abogados especialistas",
+    description: "Abogados litigantes penalistas, administrativistas, especialistas en contratación estatal y contadores dedicados a la defensa técnica de tus derechos en Colombia.",
+    keywords: "equipo abogados amf, abogados penalistas colombia, contratacion estatal secop, firma legal abogados especialistas",
     path: "/equipo",
     breadcrumbName: "Equipo"
   },

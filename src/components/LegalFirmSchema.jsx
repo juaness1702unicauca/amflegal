@@ -9,7 +9,8 @@ export const LegalFirmSchema = () => {
     "image": `${SITE_DOMAIN}/assets/logos/Sin%20Fondo/AMF%20FIRMA%20LEGAL%20VINO%20TINTO.png`,
     "@id": SITE_DOMAIN,
     "url": SITE_DOMAIN,
-    "telephone": "+573155977466",
+    "telephone": "+573013302160",
+    "email": "notificaciones@amfjuridico.com",
     "priceRange": "$$",
     "address": [
       {
@@ -61,7 +62,7 @@ export const LegalFirmSchema = () => {
       "closes": "23:59"
     },
     "sameAs": [
-      "https://wa.me/573155977466"
+      "https://wa.me/573013302160"
     ],
     "description": "Protección jurídica permanente para Fuerza Pública y defensa penal estratégica 24/7 en Colombia."
   };

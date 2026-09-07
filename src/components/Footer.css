@@ -30,6 +30,28 @@
   align-self: flex-start;
 }
 
+.footer-logo-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0 2.5rem 0;
+  width: 100%;
+}
+
+.footer-centered-logo {
+  height: 90px;
+  width: auto;
+  max-width: min(360px, 90vw);
+  object-fit: contain;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  display: block;
+}
+
+.footer-centered-logo:hover {
+  transform: scale(1.04);
+  opacity: 0.95;
+}
+
 .footer-links-list {
   list-style: none;
   display: flex;

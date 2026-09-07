@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { useNavigate } from 'react-router-dom';
 import './FuerzaPublica.css';
 import { SEOHead } from '../components/SEOHead';
 import { WhatsAppIcon } from '../components/WhatsAppIcon';
 import {
   ShieldCheck,
+  MessageSquare,
   Scale,
   HeartHandshake,
   ArrowRight,
@@ -95,6 +97,46 @@ export const FuerzaPublica = () => {
   return (
     <main>
       <SEOHead pageKey="fuerzaPublica" />
+      <Helmet>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "¿Que cubre la suscripcion juridica AMF para Fuerza Publica?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Cubre consultas juridicas ilimitadas, representacion en procesos disciplinarios (hasta 5 segun el plan), proteccion constitucional familiar (tutelas, derechos de peticion, salud), asesoria preventiva continua y atencion presencial o virtual en Colombia."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Cuanto cuesta la suscripcion juridica para policia o ejercito?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Los planes van desde $59.900/mes (Plan Escudo), $79.900/mes (Plan Fortaleza) hasta $119.900/mes (Plan Bastion). Todos incluyen consultas ilimitadas y sin costos ocultos."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿La suscripcion AMF cubre a la familia del funcionario?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Si. Los planes Fortaleza y Bastion incluyen asesoria juridica para familiares autorizados segun las condiciones del servicio, incluyendo beneficios constitucionales en salud y tutelas."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Donde tiene sedes AMF Firma Legal para atender Fuerza Publica?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "AMF tiene sedes en Bogota (Bulevar Tequendama), Cali, Piendamo (Cauca) y Medellin, con atencion presencial bajo agendamiento previo y atencion virtual para todo el territorio colombiano."
+              }
+            }
+          ]
+        })}</script>
+      </Helmet>
       {/* SECCIÓN ENCABEZADO ESTÁNDAR */}
       <section className="section" style={{ backgroundColor: 'var(--color-cream)', paddingTop: '2.2rem', paddingBottom: '3rem' }}>
         <div className="container text-center" style={{ maxWidth: '800px', margin: '0 auto' }}>

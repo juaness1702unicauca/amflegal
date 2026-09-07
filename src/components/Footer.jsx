@@ -16,15 +16,6 @@ export const Footer = () => {
 
           {/* Column 1: Brand & Tagline */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.2rem' }}>
-            <img
-              src={logoCrema}
-              alt="AMF Firma Legal - Abogados en Colombia"
-              loading="lazy"
-              style={{ height: '52px', width: 'auto', objectFit: 'contain', alignSelf: 'flex-start' }}
-              onError={(e) => {
-                e.target.style.display = 'none';
-              }}
-            />
             <h3 className="text-serif" style={{ fontSize: '1.3rem', color: 'var(--color-gold)' }}>
               AMF FIRMA LEGAL
             </h3>
@@ -98,7 +89,7 @@ export const Footer = () => {
               ¿Tienes una urgencia o quieres afiliarte hoy mismo?
             </p>
             <a
-              href={whatsappLink(undefined, WA_MESSAGES.DESDE_PENAL)}
+              href={whatsappLink(undefined, WA_MESSAGES.FOOTER_CONTACT)}
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-gold"
@@ -109,6 +100,23 @@ export const Footer = () => {
             </a>
           </div>
 
+        </div>
+
+        {/* Box dedicado para el logo centrado (penúltimo elemento del footer) */}
+        <div className="footer-logo-box">
+          <Link to="/" aria-label="AMF Firma Legal - Inicio">
+            <img
+              src={logoCrema}
+              alt="AMF Firma Legal - Abogados en Colombia"
+              loading="lazy"
+              className="footer-centered-logo"
+              width={360}
+              height={90}
+              onError={(e) => {
+                e.target.style.display = 'none';
+              }}
+            />
+          </Link>
         </div>
 
         {/* Legal Bottom Bar */}
@@ -130,8 +138,8 @@ export const Footer = () => {
           </div>
           <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
             <span>* Las representaciones y servicios están sujetos a los términos de cada plan.</span>
-            <Link to="/formulario" style={{ color: 'var(--color-gold)', textDecoration: 'underline' }}>
-              Tratamiento de Datos (Ley 1581)
+            <Link to="/privacidad" style={{ color: 'var(--color-gold)', textDecoration: 'underline' }}>
+              Política de Privacidad (Ley 1581)
             </Link>
           </div>
         </div>

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { ShieldCheck, Scale, Award, X, ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
 import { whatsappLink, WA_MESSAGES } from '../config/siteConfig';
 import { SEOHead } from '../components/SEOHead';
@@ -10,6 +11,7 @@ const jorgePhoto   = '/assets/Equipo fotos/Jorge Florez.png';
 const juanPhoto    = '/assets/Equipo fotos/Juan Gregorio.png';
 const stevenPhoto  = '/assets/Equipo fotos/Steven Alegrias.png';
 const martinezPhoto = '/assets/Equipo fotos/Martinez.png';
+const davidPhoto   = '/assets/Equipo fotos/david pechene.png';
 
 export const Equipo = () => {
   const [selectedMemberIndex, setSelectedMemberIndex] = useState(null);
@@ -39,6 +41,15 @@ export const Equipo = () => {
       bio: 'Contador Público y Abogado con amplia experiencia en asesoría jurídica, contable y financiera, integrando el análisis legal con la precisión técnica de la contabilidad, la auditoría y la gestión organizacional.',
       photo: juanPhoto,
       badge: 'Finanzas & Derecho'
+    },
+    {
+      name: 'David Fernando Pechené Torres',
+      role: 'Abogado Especialista y Magíster',
+      subtitle: 'Contratación Estatal e Infraestructura Pública',
+      bio: 'Abogado y Magíster en Contratación Estatal, especialista en Gestión Contractual e Infraestructura Pública. Cuenta con amplia trayectoria en asesoría legal y estructuración de procesos para entidades públicas y privadas, con dominio avanzado de SECOP I, II y Tienda Virtual.',
+      photo: davidPhoto,
+      objectPosition: 'center 35%',
+      badge: 'Contratación Estatal'
     },
     {
       name: 'Steven Alegrías Bolaños',
@@ -81,6 +92,20 @@ export const Equipo = () => {
   return (
     <main>
       <SEOHead pageKey="equipo" />
+      <Helmet>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          "name": "Equipo de Abogados AMF Firma Legal",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "item": { "@type": "Person", "name": "Esteban Avila Meneses", "jobTitle": "Abogado Penalista Especialista en Derecho Procesal Penal", "worksFor": { "@type": "LegalService", "name": "AMF Firma Legal", "url": "https://amfjuridico.com" } } },
+            { "@type": "ListItem", "position": 2, "item": { "@type": "Person", "name": "Jorge Ernesto Florez Martinez", "jobTitle": "Abogado Penalista Especialista en Derecho Penal", "worksFor": { "@type": "LegalService", "name": "AMF Firma Legal", "url": "https://amfjuridico.com" } } },
+            { "@type": "ListItem", "position": 3, "item": { "@type": "Person", "name": "Juan Gregorio Minda Ceron", "jobTitle": "Contador Publico y Abogado Especialista en Finanzas y Derecho Procesal Penal", "worksFor": { "@type": "LegalService", "name": "AMF Firma Legal", "url": "https://amfjuridico.com" } } },
+            { "@type": "ListItem", "position": 4, "item": { "@type": "Person", "name": "David Fernando Pechene Torres", "jobTitle": "Abogado Magister en Contratacion Estatal e Infraestructura Publica SECOP", "worksFor": { "@type": "LegalService", "name": "AMF Firma Legal", "url": "https://amfjuridico.com" } } },
+            { "@type": "ListItem", "position": 5, "item": { "@type": "Person", "name": "Steven Alegrias Bolanos", "jobTitle": "Abogado Especialista en Derecho Administrativo y Legislativo", "worksFor": { "@type": "LegalService", "name": "AMF Firma Legal", "url": "https://amfjuridico.com" } } }
+          ]
+        })}</script>
+      </Helmet>
       {/* Header Equipo */}
       <section className="section" style={{ backgroundColor: 'var(--color-cream)', paddingTop: '2.5rem', paddingBottom: '3.5rem' }}>
         <div className="container text-center" style={{ maxWidth: '850px', margin: '0 auto' }}>
@@ -88,7 +113,7 @@ export const Equipo = () => {
             Equipo Profesional AMF Firma Legal
           </h1>
           <p style={{ fontSize: '1.15rem', color: 'var(--color-ink)', lineHeight: '1.65' }}>
-            Litigantes penalistas, administrativistas y contadores integrados bajo una estrategia de alto nivel.
+            Litigantes penalistas, administrativistas, especialistas en contratación estatal y contadores integrados bajo una estrategia de alto nivel.
           </p>
         </div>
       </section>
@@ -110,8 +135,10 @@ export const Equipo = () => {
                 <div className="team-photo-summary-wrapper">
                   <img
                     src={member.photo}
-                    alt={`${member.name} - ${member.role} | AMF Firma Legal`}
+                    alt={`${member.name} - ${member.role} | AMF Firma Legal Colombia`}
                     loading="lazy"
+                    width={210}
+                    height={210}
                     className="team-photo-summary"
                     style={{ objectPosition: member.objectPosition || 'top center', ...(member.imgStyle || {}) }}
                     onError={(e) => {
@@ -206,8 +233,10 @@ export const Equipo = () => {
               <div className="team-modal-photo-wrapper">
                 <img
                   src={activeMember.photo}
-                  alt={`${activeMember.name} - ${activeMember.role} | AMF Firma Legal`}
+                  alt={`${activeMember.name} - ${activeMember.role} | AMF Firma Legal Colombia`}
                   className="team-modal-photo"
+                  width={190}
+                  height={190}
                   style={{ objectPosition: activeMember.objectPosition || 'top center', ...(activeMember.imgStyle || {}) }}
                 />
               </div>

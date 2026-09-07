@@ -39,6 +39,10 @@ export const SEOHead = ({ pageKey }) => {
       <meta property="og:title" content={meta.title} />
       <meta property="og:description" content={meta.description} />
       <meta property="og:image" content={DEFAULT_OG_IMAGE} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:image:type" content="image/jpeg" />
+      <meta property="og:image:alt" content="AMF Firma Legal - Protección Jurídica y Defensa Penal 24/7 en Colombia" />
       <meta property="og:site_name" content={SITE_NAME} />
       <meta property="og:locale" content="es_CO" />
 

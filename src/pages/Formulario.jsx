@@ -218,28 +218,32 @@ export const Formulario = () => {
 
   // Helper to build custom prefilled WhatsApp message from form inputs
   const getWhatsAppMessageFromForm = () => {
-    let msg = `Hola AMF Legal, envío una solicitud desde la página web:\n\n`;
-    msg += `👤 *Nombre:* ${formData.nombre}\n`;
-    msg += `📞 *Teléfono:* ${formData.telefono}\n`;
-    if (formData.email) msg += `✉️ *Correo:* ${formData.email}\n`;
-    msg += `📍 *Ciudad:* ${formData.ciudad}\n`;
-    msg += `📌 *Asunto/Necesidad:* ${formData.necesidad}\n\n`;
+    const lines = [
+      '*SOLICITUD DE ASESORÍA - AMF FIRMA LEGAL*',
+      '',
+      `• *Nombre:* ${formData.nombre?.trim() || ''}`,
+      `• *Teléfono:* ${formData.telefono?.trim() || ''}`,
+      formData.email?.trim() ? `• *Correo:* ${formData.email.trim()}` : null,
+      `• *Ciudad:* ${formData.ciudad?.trim() || ''}`,
+      `• *Asunto / Necesidad:* ${formData.necesidad || ''}`
+    ];
 
     if (formData.necesidad === 'Planes y Suscripción Fuerza Pública') {
-      msg += `🎖️ *Institución:* ${formData.institucion}\n`;
-      msg += `🛡️ *Plan de interés:* ${formData.planInteres}\n`;
+      if (formData.institucion) lines.push(`• *Institución:* ${formData.institucion}`);
+      if (formData.planInteres) lines.push(`• *Plan de interés:* ${formData.planInteres}`);
     } else if (formData.necesidad === 'Defensa Penal (24/7)' || formData.necesidad === 'Representación de Víctimas') {
-      msg += `⚖️ *Situación:* ${formData.situacionPenal}\n`;
-      msg += `⏰ *Audiencia Próxima:* ${formData.audienciaProxima}\n`;
+      if (formData.situacionPenal) lines.push(`• *Situación:* ${formData.situacionPenal}`);
+      if (formData.audienciaProxima) lines.push(`• *Audiencia próxima:* ${formData.audienciaProxima}`);
     } else {
-      msg += `🚨 *Nivel de Urgencia:* ${formData.urgencia}\n`;
+      if (formData.urgencia) lines.push(`• *Nivel de urgencia:* ${formData.urgencia}`);
     }
 
-    if (formData.detalles) {
-      msg += `\n💬 *Detalles del caso:* ${formData.detalles}\n`;
+    if (formData.detalles?.trim()) {
+      lines.push('');
+      lines.push(`• *Detalles de la consulta:* ${formData.detalles.trim()}`);
     }
 
-    return msg;
+    return lines.filter(Boolean).join('\n');
   };
 
   return (
@@ -251,7 +255,7 @@ export const Formulario = () => {
             Formulario de Contacto y Asesoría Legal
           </h1>
           <p style={{ fontSize: '1.15rem', color: 'var(--color-text-muted)', lineHeight: '1.6' }}>
-            Diligencia tus datos a continuación. El formulario organizará tu consulta y abrirá **WhatsApp** listo para enviar a nuestro equipo de abogados.
+            Diligencia tus datos a continuación. El formulario organizará tu consulta y abrirá <strong>WhatsApp</strong> listo para enviar a nuestro equipo de abogados.
           </p>
         </div>
       </section>

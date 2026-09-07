@@ -60,7 +60,7 @@ export const FloatingWhatsApp = () => {
       )}
 
       <a
-        href={whatsappLink(undefined, WA_MESSAGES.HOME_CAROUSEL_PENAL)}
+        href={whatsappLink(undefined, WA_MESSAGES.GENERAL_FLOATING)}
         target="_blank"
         rel="noopener noreferrer"
         style={{

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { useNavigate } from 'react-router-dom';
 import './DerechoPenal.css';
 import { SEOHead } from '../components/SEOHead';
@@ -16,7 +17,46 @@ export const DerechoPenal = () => {
   return (
     <main>
       <SEOHead pageKey="derechoPenal" />
-      {/* SECCIÓN ENCABEZADO ESTÁNDAR */}
+      <Helmet>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "¿Que hago si me cita la Fiscalia?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Antes de declarar o rendir interrogatorio debes entender exactamente tu situacion juridica. Contacta a AMF Firma Legal de inmediato: te orientamos sobre tus derechos y la estrategia adecuada antes de cualquier diligencia."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Tienen asistencia penal 24 horas los 7 dias de la semana?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Si. AMF Firma Legal ofrece asistencia penal 24/7 para capturas, legalizaciones de captura, audiencias urgentes y situaciones penales de alta complejidad en Colombia."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Pueden defender a un servidor publico en proceso penal?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Si. Contamos con experiencia en investigaciones penales vinculadas al ejercicio de funciones publicas, con lectura penal integral para servidores del Estado."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Como contacto a AMF Firma Legal en una emergencia penal?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A traves de WhatsApp al numero +57 301 330 2160, disponible las 24 horas. Tambien puedes escribirnos a notificaciones@amfjuridico.com o desde el formulario de contacto en amfjuridico.com/formulario."
+              }
+            }
+          ]
+        })}</script>
+      </Helmet>
       <section className="section" style={{ backgroundColor: 'var(--color-cream)', paddingTop: '2.2rem', paddingBottom: '3rem' }}>
         <div className="container text-center" style={{ maxWidth: '800px', margin: '0 auto' }}>
           <h1 className="text-serif" style={{ fontSize: 'clamp(2.2rem, 4.5vw, 3.2rem)', color: 'var(--color-wine)', marginBottom: '1rem' }}>
