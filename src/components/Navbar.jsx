@@ -2,9 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import './Navbar.css';
+import { getAssetUrl } from '../config/siteConfig';
 
-const logoWine  = '/assets/logos/Sin Fondo/AMF FIRMA LEGAL VINO TINTO.png';
-const logoCrema = '/assets/logos/Sin Fondo/AMF FIRMA LEGAL CREMA .png';
+const logoWine  = getAssetUrl('/assets/logos/Sin Fondo/AMF FIRMA LEGAL VINO TINTO.png');
+const logoCrema = getAssetUrl('/assets/logos/Sin Fondo/AMF FIRMA LEGAL CREMA .png');
 
 const WhatsAppIcon = ({ size = 18, color = 'currentColor' }) => (
   <svg
@@ -26,7 +27,9 @@ export const Navbar = () => {
   const navigate = useNavigate();
 
   // Detectar si estamos en cualquier pestaña / subpágina interna diferente a Inicio
-  const isDarkNav = location.pathname !== '/';
+  const cleanPath = location.pathname.replace(/\/+$/, '') || '/';
+  const isHome = cleanPath === '/' || cleanPath === '/amflegal';
+  const isDarkNav = !isHome;
 
   useEffect(() => {
     const handleScroll = () => {

@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { MapPin, ShieldCheck, Scale, Phone, ArrowUpRight } from 'lucide-react';
-import { whatsappLink, WA_MESSAGES } from '../config/siteConfig';
+import { whatsappLink, WA_MESSAGES, getAssetUrl } from '../config/siteConfig';
 import { WhatsAppIcon } from './WhatsAppIcon';
 import './Footer.css';
 
-const logoCrema = '/assets/logos/Sin Fondo/AMF FIRMA LEGAL CREMA .png';
+const logoCrema = getAssetUrl('/assets/logos/Sin Fondo/AMF FIRMA LEGAL CREMA .png');
 
 export const Footer = () => {
   return (

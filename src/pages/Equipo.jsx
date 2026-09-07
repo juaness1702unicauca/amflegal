@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ShieldCheck, Scale, Award, X, ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
-import { whatsappLink, WA_MESSAGES } from '../config/siteConfig';
+import { whatsappLink, WA_MESSAGES, getAssetUrl } from '../config/siteConfig';
 import { SEOHead } from '../components/SEOHead';
 import { WhatsAppIcon } from '../components/WhatsAppIcon';
 import './Equipo.css';
 
-const estebanPhoto = '/assets/Equipo fotos/Esteban Avila.png';
-const jorgePhoto   = '/assets/Equipo fotos/Jorge Florez.png';
-const juanPhoto    = '/assets/Equipo fotos/Juan Gregorio.png';
-const stevenPhoto  = '/assets/Equipo fotos/Steven Alegrias.png';
-const martinezPhoto = '/assets/Equipo fotos/Martinez.png';
-const davidPhoto   = '/assets/Equipo fotos/david pechene.png';
+const estebanPhoto = getAssetUrl('/assets/Equipo fotos/Esteban Avila.png');
+const jorgePhoto   = getAssetUrl('/assets/Equipo fotos/Jorge Florez.png');
+const juanPhoto    = getAssetUrl('/assets/Equipo fotos/Juan Gregorio.png');
+const stevenPhoto  = getAssetUrl('/assets/Equipo fotos/Steven Alegrias.png');
+const martinezPhoto = getAssetUrl('/assets/Equipo fotos/Martinez.png');
+const davidPhoto   = getAssetUrl('/assets/Equipo fotos/david pechene.png');
 
 export const Equipo = () => {
   const [selectedMemberIndex, setSelectedMemberIndex] = useState(null);
